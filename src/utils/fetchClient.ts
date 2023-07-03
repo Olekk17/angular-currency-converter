@@ -1,7 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
-// const BASE_URL = 'https://api.currencyapi.com/v3/latest?apikey=n5ZZlNRPS7tJlper4VHdetYOHIehVwiInXx8xwxt';
-const BASE_URL = 'https://api.currencyapi.com/v3/';
+const BASE_URL = 'https://api.currencyapi.com/v3/latest?apikey=n5ZZlNRPS7tJlper4VHdetYOHIehVwiInXx8xwxt';
 
 function request<T>(
   url: string,

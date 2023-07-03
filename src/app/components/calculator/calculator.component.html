@@ -1,0 +1,51 @@
+<div class="calculator">
+  <h1 class="calculator__header">Convert</h1>
+
+  <div class="calculator__container">
+    <h2>From</h2>
+    <div class="calculator__from">
+      <input
+        type="text"
+        name="value_from"
+        id="value_from"
+        [(ngModel)]="valueFrom"
+        (keypress)="validateInput($event);"
+        (input)="recalcTo()"
+      >
+      <select
+        name="currency_from"
+        id="currency_from"
+        [(ngModel)]="currencyFrom"
+        (change)="recalc()"
+      >
+        <option value="USD">USD</option>
+        <option value="UAH">UAH</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+      </select>
+    </div>
+
+    <h2>To</h2>
+    <div class="calculator__to">
+      <input
+        type="text"
+        name="value_to"
+        id="value_to"
+        [(ngModel)]="valueTo"
+        (keypress)="validateInput($event)"
+        (input)="recalcFrom()"
+      >
+      <select
+        name="currency_to"
+        id="currency_to"
+        [(ngModel)]="currencyTo"
+        (change)="recalc()"
+      >
+        <option value="USD">USD</option>
+        <option value="UAH">UAH</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+      </select>
+    </div>
+  </div>
+</div>
